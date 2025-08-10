@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETL Ventas Simple | Sebastián González Pino</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ETL Simple de Ventas - Detalles del Proyecto</title>
+    <link rel="stylesheet" href="etl-simple-ventas.css" />
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div id="navbar"></div>
-    <script src="loadNavbar.js"></script>
 
+    <div class="container">
+        <h1>ETL Simple de Ventas</h1>
+
+        <section class="project-description">
+            <h2>Descripción del Proyecto</h2>
+            <p>
+                Este proyecto es un pipeline sencillo de ingeniería de datos que realiza las siguientes tareas:
+            </p>
+            <ul>
+                <li>Lee un archivo CSV con datos ficticios de ventas.</li>
+                <li>Realiza limpieza y transformaciones básicas con la librería <code>pandas</code> de Python.</li>
+                <li>Carga los datos limpios en una base de datos PostgreSQL local para permitir consultas y generación de reportes simples.</li>
+                <li>Ideal para aprender el flujo básico ETL (Extracción → Transformación → Carga) en una sola máquina.</li>
+            </ul>
+        </section>
+
+        <section class="code-example">
+            <h2>Ejemplo de Código (pandas para transformación)</h2>
+            <pre><code>import pandas as pd
+
+# Leer CSV
+df = pd.read_csv('data/raw/sales.csv')
+
+# Limpieza básica
+df = df.dropna()  # eliminar filas con datos faltantes
+
+# Transformación: crear columna de total
+df['total'] = df['quantity'] * df['price']
+
+# Mostrar primeros registros
+print(df.head())
+</code></pre>
+        </section>
+
+        <section class="sql-example">
+            <h2>Base de Datos PostgreSQL</h2>
+            <p>
+                Los datos transformados se cargan en una base de datos PostgreSQL local. Aquí puedes realizar consultas para obtener reportes simples, por ejemplo:
+            </p>
+            <pre><code>SELECT product_name, SUM(total) AS total_ventas
+FROM ventas
+GROUP BY product_name
+ORDER BY total_ventas DESC;</code></pre>
+        </section>
+
+        <a href="index.html" class="back-link">&larr; Volver al inicio</a>
+    </div>
+
+</body>
 </html>

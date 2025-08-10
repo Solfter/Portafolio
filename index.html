@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Sebastián González Pino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+
+    <!-- HERO -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Hola, soy <span class="highlight">Sebastián González Pino</span></h1>
+            <h2 id="typewriter"></h2>
+            <a href="#proyectos" class="btn">Ver Proyectos</a>
+        </div>
+    </header>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="about fade-in">
+        <div class="about-content">
+            <div>
+                <h2>Sobre mí</h2>
+                <p>Soy un profesional apasionado por transformar ideas en proyectos digitales. Me encanta crear
+                    soluciones visuales, interactivas y eficientes que generen impacto real.</p>
+                <p>En este espacio comparto algunos de mis trabajos más recientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="projects fade-in">
+        <h2>Mis Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/proyecto1.jpg" alt="Proyecto 1">
+                    <div class="overlay">
+                        <p>Descripción breve del Proyecto 1.</p>
+                    </div>
+                </div>
+                <h3>Proyecto 1</h3>
+                <a href="#" target="_blank">Ver Proyecto</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="img/proyecto2.jpg" alt="Proyecto 2">
+                    <div class="overlay">
+                        <p>Descripción breve del Proyecto 2.</p>
+                    </div>
+                </div>
+                <h3>Proyecto 2</h3>
+                <a href="#" target="_blank">Ver Proyecto</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact fade-in">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/xgvzrkjp" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Sebastián González Pino | 
+            <a href="https://github.com/Solfter" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/sebasti%C3%A1n-gonz%C3%A1lez-pino-4a53191a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+    </footer>
+    
+    <script src="loadNavbar.js"></script>
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>

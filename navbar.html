@@ -1,13 +1,25 @@
 <head>
     <link rel="stylesheet" href="navbar.css">
 </head>
-<nav class="navbar">
-    <div class="logo">Portafolio de Sebastián González Pino</div>
-    <ul class="nav-links">
-        <li><a href="#hero">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-</nav>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Portafolio de Sebastián González Pino</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>

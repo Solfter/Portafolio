@@ -4,22 +4,17 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo">Portafolio de Sebastián González Pino</div>
+        <a href="index.html">
+            <div class="logo">Portafolio de Sebastián González Pino</div>
+        </a>
         <ul class="nav-links">
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="index.html#hero">Inicio</a></li>
+            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
         </ul>
         <div class="menu-toggle" id="menu-toggle">☰</div>
     </nav>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.querySelector('.nav-links'); // Cambiado a querySelector para usar la clase
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active'); // Cambiado a 'active' para coincidir con el CSS
-        });
-    </script>z
+    <script src="loadNavbar.js"></script>
 </body>

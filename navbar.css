@@ -70,3 +70,8 @@ body {
         text-align: center;
     }
 }
+
+a {
+  color: inherit; /* hereda el color del texto padre */
+  text-decoration: none; /* quita el subrayado */
+}

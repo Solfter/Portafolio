@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ETL Simple de Ventas - Detalles del Proyecto</title>
     <link rel="stylesheet" href="etl-simple-ventas.css" />
 </head>
+
 <body>
 
     <div class="container">
         <h1>ETL Simple de Ventas</h1>
+        <section class="github-link">
+            <h2>Repositorio en GitHub</h2>
+            <p>Puedes ver el código completo y documentación en mi repositorio haciendo click 
+                <a href="https://github.com/Solfter/pipeline-simple-de-ventas" target="_blank" rel="noopener noreferrer">aqui</a></p>
+            </a></p>
+        </section>
 
         <section class="project-description">
             <h2>Descripción del Proyecto</h2>
@@ -18,9 +26,11 @@
             </p>
             <ul>
                 <li>Lee un archivo CSV con datos ficticios de ventas.</li>
-                <li>Realiza limpieza y transformaciones básicas con la librería <code>pandas</code> de Python.</li>
-                <li>Carga los datos limpios en una base de datos PostgreSQL local para permitir consultas y generación de reportes simples.</li>
-                <li>Ideal para aprender el flujo básico ETL (Extracción → Transformación → Carga) en una sola máquina.</li>
+                <li>Realiza limpieza y transformaciones básicas con la librería pandas de Python.</li>
+                <li>Carga los datos limpios en una base de datos PostgreSQL local para permitir consultas y generación
+                    de reportes simples.</li>
+                <li>Ideal para aprender el flujo básico ETL (Extracción → Transformación → Carga) en una sola máquina.
+                </li>
             </ul>
         </section>
 
@@ -45,7 +55,8 @@ print(df.head())
         <section class="sql-example">
             <h2>Base de Datos PostgreSQL</h2>
             <p>
-                Los datos transformados se cargan en una base de datos PostgreSQL local. Aquí puedes realizar consultas para obtener reportes simples, por ejemplo:
+                Los datos transformados se cargan en una base de datos PostgreSQL local. Aquí puedes realizar consultas
+                para obtener reportes simples, por ejemplo:
             </p>
             <pre><code>SELECT product_name, SUM(total) AS total_ventas
 FROM ventas
@@ -57,4 +68,5 @@ ORDER BY total_ventas DESC;</code></pre>
     </div>
 
 </body>
+
 </html>

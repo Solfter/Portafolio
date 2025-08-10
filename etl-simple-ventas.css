@@ -32,10 +32,6 @@ section {
 }
 
 code {
-    background-color: #eee;
-    padding: 2px 5px;
-    border-radius: 4px;
-    font-family: monospace;
     font-size: 0.95em;
 }
 
@@ -45,7 +41,6 @@ pre {
     padding: 15px;
     border-radius: 6px;
     overflow-x: auto;
-    font-family: monospace;
     font-size: 0.9em;
     line-height: 1.4;
 }

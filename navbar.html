@@ -16,10 +16,10 @@
 
     <script>
         const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
+        const navLinks = document.querySelector('.nav-links'); // Cambiado a querySelector para usar la clase
 
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
+            navLinks.classList.toggle('active'); // Cambiado a 'active' para coincidir con el CSS
         });
     </script>
 </body>

@@ -133,6 +133,7 @@ footer {
     transition: opacity 0.3s ease;
     text-align: center;
     padding: 1rem;
+
 }
 
 .project-image:hover .overlay {

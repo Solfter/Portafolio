@@ -9,59 +9,54 @@
 </head>
 
 <body>
-
     <!-- NAVBAR -->
     <div id="navbar"></div>
 
     <div class="container">
-        <h1>ETL Simple de Ventas</h1>
+        <h1 class="fade-in">📊 ETL Simple de Ventas</h1>
+
         <section class="github-link">
             <h2>Repositorio en GitHub</h2>
-            <p>Puedes ver el código completo y documentación en mi repositorio haciendo click 
-                <a href="https://github.com/Solfter/pipeline-simple-de-ventas" target="_blank" rel="noopener noreferrer">aqui</a></p>
-            </a></p>
+            <p>
+                Puedes ver el código completo y documentación en mi repositorio haciendo click
+                <a href="https://github.com/Solfter/pipeline-simple-de-ventas" target="_blank" rel="noopener noreferrer" class="btn-link">
+                    aquí
+                </a>
+            </p>
         </section>
 
         <section class="project-description">
             <h2>Descripción del Proyecto</h2>
-            <p>
-                Este proyecto es un pipeline sencillo de ingeniería de datos que realiza las siguientes tareas:
-            </p>
+            <p>Este proyecto es un pipeline sencillo de ingeniería de datos que realiza las siguientes tareas:</p>
             <ul>
-                <li>Lee un archivo CSV con datos ficticios de ventas.</li>
-                <li>Realiza limpieza y transformaciones básicas con la librería pandas de Python.</li>
-                <li>Carga los datos limpios en una base de datos PostgreSQL local para permitir consultas y generación
-                    de reportes simples.</li>
-                <li>Ideal para aprender el flujo básico ETL (Extracción → Transformación → Carga) en una sola máquina.
-                </li>
+                <li>📥 Lee un archivo CSV con datos ficticios de ventas.</li>
+                <li>🧹 Realiza limpieza y transformaciones básicas con la librería pandas de Python.</li>
+                <li>💾 Carga los datos limpios en una base de datos PostgreSQL local.</li>
+                <li>🎯 Ideal para aprender el flujo básico ETL (Extracción → Transformación → Carga).</li>
             </ul>
         </section>
 
         <section class="code-example">
             <h2>Ejemplo de Código (pandas para transformación)</h2>
-            <pre><code>import pandas as pd
+            <pre><code class="python">import pandas as pd
 
 # Leer CSV
 df = pd.read_csv('data/raw/sales.csv')
 
 # Limpieza básica
-df = df.dropna()  # eliminar filas con datos faltantes
+df = df.dropna()
 
 # Transformación: crear columna de total
 df['total'] = df['quantity'] * df['price']
 
-# Mostrar primeros registros
 print(df.head())
 </code></pre>
         </section>
 
         <section class="sql-example">
             <h2>Base de Datos PostgreSQL</h2>
-            <p>
-                Los datos transformados se cargan en una base de datos PostgreSQL local. Aquí puedes realizar consultas
-                para obtener reportes simples, por ejemplo:
-            </p>
-            <pre><code>SELECT product_name, SUM(total) AS total_ventas
+            <p>Consulta SQL para obtener el total de ventas por producto:</p>
+            <pre><code class="sql">SELECT product_name, SUM(total) AS total_ventas
 FROM ventas
 GROUP BY product_name
 ORDER BY total_ventas DESC;</code></pre>
@@ -72,5 +67,4 @@ ORDER BY total_ventas DESC;</code></pre>
 
     <script src="loadNavbar.js"></script>
 </body>
-
 </html>
